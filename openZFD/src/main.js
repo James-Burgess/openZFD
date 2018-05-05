@@ -47,7 +47,7 @@ export default new Vue({
   },
   framework7: {
     id: 'io.framework7.testapp',
-    theme, // md or ios
+    theme: 'md', // md or ios
   },
   routes,
 });

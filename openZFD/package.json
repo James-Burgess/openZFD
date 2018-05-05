@@ -1,7 +1,7 @@
 {
-    "name": "helloworld",
-    "version": "1.0.0",
-    "description": "Brand new cordova project with framework7 - vue - webpack!",
+    "name": "openZFD",
+    "version": "0.1.0",
+    "description": "Because developers should have to scan their fingerprint.",
     "scripts": {
         "default": "echo \"There is no scripts you can run with npm run command.\" && exit 1"
     },
@@ -41,8 +41,11 @@
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
         "babel-preset-env": "^1.6.1",
+        "com.unarin.cordova.beacon": "git+https://github.com/petermetz/cordova-plugin-ibeacon.git",
         "cordova-android": "^7.0.0",
         "cordova-browser": "^5.0.3",
+        "cordova-plugin-device": "^2.0.2",
+        "cordova-plugin-whitelist": "1",
         "font-awesome": "^4.7.0",
         "framework7": "^2.0.6",
         "framework7-icons": "^0.9.0",
@@ -50,12 +53,12 @@
         "lodash": "^4.17.10",
         "loglevel": "^1.4.1",
         "vue": "^2.5.13",
-        "vuex": "^3.0.1",
-        "cordova-plugin-whitelist": "1"
+        "vuex": "^3.0.1"
     },
     "cordova": {
         "plugins": {
-            "cordova-plugin-whitelist": {}
+            "cordova-plugin-whitelist": {},
+            "com.unarin.cordova.beacon": {}
         },
         "platforms": [
             "android"
