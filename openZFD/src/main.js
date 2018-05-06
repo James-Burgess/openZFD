@@ -17,7 +17,7 @@ import Framework7Icons from 'framework7-icons/css/framework7-icons.css'
 import FontAwesome from 'font-awesome/css/font-awesome.css'
 
 // Import App Custom Styles
-// import AppStyles from './assets/sass/main.scss'
+import AppStyles from './assets/sass/main.scss'
 
 // Import App Component
 import app from './main.vue'
@@ -28,6 +28,11 @@ import routes from './routes.js'
 // Import Vuex Storage
 import store from './assets/vuex/storage.js'
 
+// load vue resource for ajax
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+
+
 // Install Plugin
 Vue.use(Framework7Vue, Framework7);
 
@@ -35,6 +40,13 @@ let theme = 'auto';
 if (document.location.search.indexOf('theme=') >= 0) {
   theme = document.location.search.split('theme=')[1].split('&')[0];
 }
+
+// export var webAuth = new auth0.WebAuth({
+//   domain: 'YOUR_DOMAIN',
+//   clientID: 'YOUR_CLIENT_ID',
+//   responseType: 'token',
+//   redirectUri: 'YOUR_REDIRECT_URI'
+// });
 
 // Init Vue App
 export default new Vue({
