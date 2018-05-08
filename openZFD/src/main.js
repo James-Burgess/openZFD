@@ -28,25 +28,32 @@ import routes from './routes.js'
 // Import Vuex Storage
 import store from './assets/vuex/storage.js'
 
+// import auth0 instance
+import auth0 from 'auth0-js'
+
 // load vue resource for ajax
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
 
-
-// Install Plugin
+// Install F7 Plugin
 Vue.use(Framework7Vue, Framework7);
 
+// set the theme
 let theme = 'auto';
 if (document.location.search.indexOf('theme=') >= 0) {
   theme = document.location.search.split('theme=')[1].split('&')[0];
 }
 
-// export var webAuth = new auth0.WebAuth({
-//   domain: 'YOUR_DOMAIN',
-//   clientID: 'YOUR_CLIENT_ID',
-//   responseType: 'token',
-//   redirectUri: 'YOUR_REDIRECT_URI'
-// });
+// start auth0 instance
+export var webAuth = new auth0.WebAuth({
+  domain: 'jimmyb.auth0.com',
+  clientID: 'EKF2dpyd26DV5nwknd32Ix6Yq2pNp625',
+  responseType: 'token',
+  redirectUri: 'http://localhost:8081/',
+  audience: 'https://jimmyb.auth0.com/userinfo',
+  responseType: 'token id_token',
+  scope: 'openid'
+});
 
 // Init Vue App
 export default new Vue({

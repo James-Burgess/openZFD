@@ -1,4 +1,4 @@
-// import {router} from '../main.js'
+import {router} from '../index'
 
 const API_URL = 'http://localhost:3001/'
     const LOGIN_URL = API_URL + 'sessions/create/'

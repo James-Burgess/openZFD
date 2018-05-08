@@ -15,7 +15,7 @@ P<template>
 		</f7-list>	
 
     	<f7-list>
-		  <f7-list-button color="blue" v-on:click="loginAction">Login Button</f7-list-button>
+		  <f7-list-button color="blue" href="/login/">Login Button</f7-list-button>
 		</f7-list>
 
 		
@@ -24,8 +24,29 @@ P<template>
 </template>
 <script>
 	import { mapState, mapActions } from 'vuex'
+  import {webAuth} from '../../../main'
 
   export default {
+    mounted() {
+      // Parse the hash
+      if (window.location.hash) {
+        webAuth.parseHash({ hash: window.location.hash }, function(err, authResult) {
+          console.log('authResult');
+          if (err) {
+            return console.log(err);
+          }
+          if (authResult) {
+            webAuth.client.userInfo(authResult.accessToken, function(err, user) {
+              localStorage.setItem('profile', JSON.stringify(user))
+              localStorage.setItem('id_token', authResult.idToken)
+              console.log(authResult);
+              console.log(JSON.stringify(user))
+            
+            });
+          }
+        });
+      }
+    },
   	computed: {
         ...mapState({
             user: state => state.user
