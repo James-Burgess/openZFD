@@ -6,6 +6,7 @@ P<template>
          </f7-nav-left>
         <div class="title">openZFD</div>
     </f7-navbar>
+
     <f7-block-title>{{user.name ? "hello " : "Please login"}}{{ user.name }}</f7-block-title>
     	<f7-list>
 			<f7-list-group v-if="user.name">
@@ -15,7 +16,7 @@ P<template>
 		</f7-list>	
 
     	<f7-list>
-		  <f7-list-button color="blue" href="/login/">Login Button</f7-list-button>
+		  <f7-list-button color="blue" v-on:click="showUserInfo">Check Stats</f7-list-button>
 		</f7-list>
 
 		

@@ -7,7 +7,6 @@
           <a class="button panel-close" href="/login/">Login</a>
           <a class="button panel-close" href="/signup/">Sign Up</a>
           <a class="button panel-close" href="/secretquote/">Secret Quote</a>
-          <a class="button panel-close" href="/login/">Logout</a>
         </div>
     </div>
 
@@ -25,18 +24,40 @@
           </f7-row>
       </div>
     </div>
+    <div v-if="user.name">
+      <a class="button panel-close" v-on:click="logout"> logout</a>
+      </div>
+
 
   </f7-page>
 </template>
 
 
 <script>
+  import { mapState, mapActions } from 'vuex'
   export default {
+    computed: {
+        ...mapState({
+            user: state => state.user
+        })
+      },
       methods:{
         setLayoutTheme(theme) {
             const self = this;
             const app = self.$f7;
             app.root.removeClass('theme-dark theme-light').addClass(`theme-${theme}`);
+          },
+          logout: function () {
+            // Clear access token and ID token from local storage
+            localStorage.removeItem('access_token')
+            localStorage.removeItem('id_token')
+            localStorage.removeItem('expires_at')
+            localStorage.removeItem('profile')
+            localStorage.removeItem('name')
+            localStorage.removeItem('picture')
+            localStorage.removeItem('email')
+            // refresh to home
+            location.href = '/';
           }
       }
   };

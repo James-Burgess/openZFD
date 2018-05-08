@@ -49,10 +49,10 @@ export var webAuth = new auth0.WebAuth({
   domain: 'jimmyb.auth0.com',
   clientID: 'EKF2dpyd26DV5nwknd32Ix6Yq2pNp625',
   responseType: 'token',
-  redirectUri: 'http://localhost:8081/',
+  redirectUri: 'http://192.168.12.136:8081/',
   audience: 'https://jimmyb.auth0.com/userinfo',
   responseType: 'token id_token',
-  scope: 'openid'
+  scope: 'openid profile email'
 });
 
 // Init Vue App
