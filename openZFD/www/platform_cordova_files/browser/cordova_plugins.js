@@ -63,6 +63,14 @@ module.exports = [
         "id": "com.unarin.cordova.beacon.BeaconRegion",
         "pluginId": "com.unarin.cordova.beacon",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-safariviewcontroller/www/SafariViewController.js",
+        "id": "cordova-plugin-safariviewcontroller.SafariViewController",
+        "pluginId": "cordova-plugin-safariviewcontroller",
+        "clobbers": [
+            "SafariViewController"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -70,7 +78,9 @@ module.exports.metadata =
 {
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-device": "2.0.2",
-    "com.unarin.cordova.beacon": "3.6.1"
+    "com.unarin.cordova.beacon": "3.6.1",
+    "cordova-plugin-safariviewcontroller": "1.5.3",
+    "cordova-plugin-customurlscheme": "4.3.0"
 }
 // BOTTOM OF METADATA
 });
