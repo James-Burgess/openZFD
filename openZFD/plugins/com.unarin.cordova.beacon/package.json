@@ -18,7 +18,7 @@
   ],
   "_resolved": "git+https://github.com/petermetz/cordova-plugin-ibeacon.git#5f088cb77bdecd08722d8b8c5d5f04b693feebd8",
   "_spec": "https://github.com/petermetz/cordova-plugin-ibeacon.git",
-  "_where": "/Users/jimmy_b/scrtipts/oZFD/openZFD",
+  "_where": "/Users/jimmy_b/scrtipts/evo-demos/Demos2015/cordova-ibeacon",
   "author": {
     "name": "Peter Metz",
     "email": "peter.metz@unarin.com",

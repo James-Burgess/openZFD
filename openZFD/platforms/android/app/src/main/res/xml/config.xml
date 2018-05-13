@@ -1,35 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.example.template" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
-        <param name="onload" value="true" />
-    </feature>
+<widget id="com.evothings.cordovaibeacon" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
     <feature name="LocationManager">
         <param name="android-package" value="com.unarin.cordova.beacon.LocationManager" />
     </feature>
-    <hook src="hooks/hookers.js" type="before_prepare" />
-    <hook src="hooks/beforedep.js" type="before_deploy" />
-    <name>OpenZFD</name>
+    <feature name="Badge">
+        <param name="android-package" value="de.appplant.cordova.plugin.badge.Badge" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>iBeacon</name>
     <description>
-        Modus Access control.
+        Example app that monitors and ranges for beacons.
     </description>
-    <author email="james@dotmodus.com" href="http://dotmodus.com">
-        James Burgess @ Dotmodus
+    <author email="mikael@evothings.com" href="http://evothings.com">
+        Mikael Kindborg
     </author>
     <content src="index.html" />
+    <xcontent src="http://192.168.43.131:4042" />
     <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <allow-navigation href="*" />
-    <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="android-minSdkVersion" value="16" />
     <preference name="DisallowOverscroll" value="true" />
 </widget>

@@ -57,14 +57,32 @@ module.exports = [
     "file": "plugins/com.unarin.cordova.beacon/www/model/BeaconRegion.js",
     "pluginId": "com.unarin.cordova.beacon",
     "runs": true
+  },
+  {
+    "id": "cordova-plugin-badge.Badge",
+    "file": "plugins/cordova-plugin-badge/www/badge.js",
+    "pluginId": "cordova-plugin-badge",
+    "clobbers": [
+      "cordova.plugins.notification.badge"
+    ]
+  },
+  {
+    "id": "cordova-plugin-local-notification.LocalNotification",
+    "file": "plugins/cordova-plugin-local-notification/www/local-notification.js",
+    "pluginId": "cordova-plugin-local-notification",
+    "clobbers": [
+      "cordova.plugins.notification.local"
+    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-device": "2.0.2",
-  "com.unarin.cordova.beacon": "3.6.1"
+  "com.unarin.cordova.beacon": "3.6.1",
+  "cordova-plugin-badge": "0.8.7",
+  "cordova-plugin-local-notification": "0.9.0-beta.3",
+  "cordova-plugin-whitelist": "1.3.3"
 };
 // BOTTOM OF METADATA
 });

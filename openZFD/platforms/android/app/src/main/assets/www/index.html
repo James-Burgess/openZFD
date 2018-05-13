@@ -1,1 +1,50 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><title>openZFD</title><link href=styles.css rel=stylesheet></head><body><script src=cordova.js></script><div id=app></div><script src=87ec21aa0fd76c068c6c.main.js></script></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no
+		initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>open ZFD</title>
+
+	<style>
+		@import 'ui/css/evothings-app.css';
+	</style>
+
+	<script>
+	// Redirect console.log to Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>
+
+	<script src="cordova.js"></script>
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/evothings/evothings.js"></script>
+	<script src="app.js"></script>
+
+</head>
+
+<body>
+
+	<!-- <header>
+		<button class="back" onclick="history.back()">
+			<img src="ui/images/arrow-left.svg" />
+		</button>
+
+		<img class="logotype" src="ui/images/logo.svg" alt="Evothings" />
+
+		<button class="menu" onclick=""><img src="ui/images/menu.svg" /></button>
+	</header> -->
+
+	<h1>openZFD</h1>
+
+	<p>Get some beacon info</p>
+
+	<ul id="beacon" class="dynamic"></ul>
+
+	<ul id="events" class="dynamic"></ul>
+
+</body>
+
+</html>
