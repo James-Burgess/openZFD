@@ -47,7 +47,7 @@ if (document.location.search.indexOf('theme=') >= 0) {
 // start auth0 instance
 export var webAuth = new auth0.WebAuth({
   domain: 'jimmyb.auth0.com',
-  clientID: 'EKF2dpyd26DV5nwknd32Ix6Yq2pNp625',
+  clientID: '<yourclient_id>',
   responseType: 'token',
   redirectUri: 'http://192.168.12.136:8081/',
   audience: 'https://jimmyb.auth0.com/userinfo',
